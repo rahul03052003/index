@@ -4,66 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul V - Aspiring Full Stack Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Basic Reset and Body Styles */
         body {
             font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: #f3f4f6; /* Equivalent to bg-gray-100 */
+            color: #374151; /* Default text color */
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 56rem; /* max-w-4xl */
+            margin: 2rem auto; /* my-8 mx-auto */
+            background-color: #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            padding: 2rem; /* p-8 */
+        }
+
+        /* Header Section */
+        .resume-header {
+            text-align: center;
+            margin-bottom: 2.5rem; /* mb-10 */
+            padding-bottom: 1.5rem; /* pb-6 */
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .resume-header h1 {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700;
+            color: #1f2937;
+        }
+        .resume-header h2 {
+            font-size: 1.25rem; /* text-xl */
+            color: #0369a1; /* text-sky-600 */
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+        .contact-info {
+            margin-top: 1rem;
+            font-size: 0.875rem; /* text-sm */
+            color: #4b5563;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem 1rem; /* gap-y-2 gap-x-4 */
+        }
+        .contact-info a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-info a:hover {
+            color: #0369a1; /* hover:text-sky-600 */
+        }
+        .contact-info span.separator {
+            display: none;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700;
+            color: #374151;
+            padding-bottom: 0.5rem; /* pb-2 */
+            margin-bottom: 1rem; /* mb-4 */
+            border-bottom: 2px solid #0ea5e9; /* border-b-2 border-sky-500 */
+        }
+        .section p, .section ul {
+            line-height: 1.6;
+        }
+        .section ul {
+            list-style-position: inside;
+            list-style-type: disc;
+        }
+
+        /* Education & Experience Specifics */
+        .item-group > div {
+            margin-bottom: 1rem;
+        }
+        .item-group > div:last-child {
+            margin-bottom: 0;
+        }
+        .item-title {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .item-subtitle {
+            font-style: italic;
+            color: #4b5563;
+        }
+        .item-date {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+        .item-description li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Skills & Certifications Grid */
+        .skills-grid, .certs-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem 2rem; /* gap-y-2 gap-x-8 */
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                padding: 3rem; /* md:p-12 */
+            }
+            .resume-header h1 {
+                font-size: 3rem; /* md:text-5xl */
+            }
+            .resume-header h2 {
+                font-size: 1.5rem; /* md:text-2xl */
+            }
+            .contact-info span.separator {
+                display: inline;
+            }
+            .skills-grid, .certs-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+            }
         }
     </style>
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto max-w-4xl bg-white shadow-lg my-8 p-8 md:p-12">
+<body>
+    <div class="container">
         
-        <!-- Header -->
-        <header class="text-center mb-10 border-b pb-6">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Rahul V</h1>
-            <h2 class="text-xl md:text-2xl text-sky-600 font-medium mt-2">Aspiring Full Stack Developer</h2>
-            <div class="mt-4 text-sm text-gray-600 flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
-                <a href="https://www.linkedin.com/in/rahul-v-309269271/" target="_blank" class="hover:text-sky-600">linkedin.com/in/rahul-v-309269271</a>
-                <span>|</span>
-                <a href="https://github.com/rahul03052003" target="_blank" class="hover:text-sky-600">github.com/rahul03052003</a>
-                 <span>|</span>
+        <header class="resume-header">
+            <h1>Rahul V</h1>
+            <h2>Aspiring Full Stack Developer</h2>
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/rahul-v-309269271/" target="_blank">linkedin.com/in/rahul-v-309269271</a>
+                <span class="separator">|</span>
+                <a href="https://github.com/rahul03052003" target="_blank">github.com/rahul03052003</a>
+                <span class="separator">|</span>
                 <span>7266926706</span>
-                 <span>|</span>
+                <span class="separator">|</span>
                 <span>rv03052003@gmail.com</span>
-                 <span>|</span>
+                <span class="separator">|</span>
                 <span>Mysore, India</span>
             </div>
         </header>
 
         <main>
-            <!-- Professional Summary -->
-            <section class="mb-8">
-                <h3 class="text-2xl font-bold text-gray-700 border-b-2 border-sky-500 pb-2 mb-4">Professional Summary</h3>
-                <p class="text-gray-700 leading-relaxed">
+            <section class="section">
+                <h3 class="section-title">Professional Summary</h3>
+                <p>
                     A motivated and aspiring Full Stack Developer currently pursuing a Master of Computer Applications (MCA). Possesses hands-on experience in building web applications using technologies like C#/.NET and Python, complemented by extensive certification in Python, Data Analysis, and Machine Learning. Proficient in both front-end and back-end development, including database management with MySQL. Eager to apply strong skills to create robust and user-friendly solutions.
                 </p>
             </section>
 
-            <!-- Education -->
-            <section class="mb-8">
-                <h3 class="text-2xl font-bold text-gray-700 border-b-2 border-sky-500 pb-2 mb-4">Education</h3>
-                <div class="space-y-4">
+            <section class="section">
+                <h3 class="section-title">Education</h3>
+                <div class="item-group">
                     <div>
-                        <h4 class="text-lg font-semibold text-gray-800">Master of Computer Applications (MCA)</h4>
-                        <p class="text-gray-600 italic">The National Institute of Engineering (NIE), Mysore, India</p>
-                        <p class="text-sm text-gray-500">2024 – Present</p>
+                        <h4 class="item-title">Master of Computer Applications (MCA)</h4>
+                        <p class="item-subtitle">The National Institute of Engineering (NIE), Mysore, India</p>
+                        <p class="item-date">2024 – Present</p>
                     </div>
                     <div>
-                        <h4 class="text-lg font-semibold text-gray-800">Bachelor of Computer Applications (BCA)</h4>
-                        <p class="text-gray-600 italic">JSS College of Arts, Commerce and Science (JSSCACS), Mysore, India</p>
-                        <p class="text-sm text-gray-500">2022 – 2024 | Graduated with 85.14%</p>
+                        <h4 class="item-title">Bachelor of Computer Applications (BCA)</h4>
+                        <p class="item-subtitle">JSS College of Arts, Commerce and Science (JSSCACS), Mysore, India</p>
+                        <p class="item-date">2022 – 2024 | Graduated with 85.14%</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Technical Skills -->
-            <section class="mb-8">
-                <h3 class="text-2xl font-bold text-gray-700 border-b-2 border-sky-500 pb-2 mb-4">Technical Skills</h3>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-gray-700">
+            <section class="section">
+                <h3 class="section-title">Technical Skills</h3>
+                <ul class="skills-grid">
                     <li><strong>Front-End:</strong> JavaScript, HTML5, CSS3, Bootstrap</li>
                     <li><strong>Back-End:</strong> Python, C#, ASP.NET, Java, PHP</li>
                     <li><strong>Databases:</strong> MySQL, SQL (Familiar with NoSQL concepts)</li>
@@ -73,55 +192,54 @@
                 </ul>
             </section>
 
-            <!-- Professional Experience -->
-            <section class="mb-8">
-                <h3 class="text-2xl font-bold text-gray-700 border-b-2 border-sky-500 pb-2 mb-4">Professional Experience</h3>
-                <div>
-                    <h4 class="text-lg font-semibold text-gray-800">Front End Web Developer Intern</h4>
-                    <p class="text-gray-600 italic">Rank Book, Mysore, India</p>
-                    <p class="text-sm text-gray-500 mb-2">2024 – Present</p>
-                    <ul class="list-disc list-inside text-gray-700 space-y-1">
-                        <li>Develop and maintain responsive user interface components for client websites using HTML, CSS, and JavaScript.</li>
-                        <li>Collaborate with senior developers to implement front-end features and troubleshoot UI/UX issues.</li>
-                        <li>Gain practical experience in version control with Git and contribute to the team's codebase on GitHub.</li>
-                    </ul>
+            <section class="section">
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="item-group">
+                    <div>
+                        <h4 class="item-title">Front End Web Developer Intern</h4>
+                        <p class="item-subtitle">Rank Book, Mysore, India</p>
+                        <p class="item-date">2024 – Present</p>
+                        <ul class="item-description">
+                            <li>Develop and maintain responsive user interface components for client websites using HTML, CSS, and JavaScript.</li>
+                            <li>Collaborate with senior developers to implement front-end features and troubleshoot UI/UX issues.</li>
+                            <li>Gain practical experience in version control with Git and contribute to the team's codebase on GitHub.</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
-            <!-- Projects -->
-            <section class="mb-8">
-                <h3 class="text-2xl font-bold text-gray-700 border-b-2 border-sky-500 pb-2 mb-4">Projects</h3>
-                <div class="space-y-6">
+            <section class="section">
+                <h3 class="section-title">Projects</h3>
+                <div class="item-group">
                     <div>
-                        <h4 class="text-lg font-semibold text-gray-800">Travel Management System</h4>
-                        <p class="text-sm text-gray-500 mb-2">Technologies: C#, ASP.NET, JavaScript, HTML, CSS</p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <h4 class="item-title">Travel Management System</h4>
+                        <p class="item-date">Technologies: C#, ASP.NET, JavaScript, HTML, CSS</p>
+                        <ul class="item-description">
                             <li>Developed a full-stack web application to manage travel bookings, user accounts, and destination information.</li>
                             <li>Engineered the back-end logic using C# and ASP.NET to handle business rules and data processing, and created an interactive, responsive front-end with JavaScript.</li>
                         </ul>
                     </div>
                      <div>
-                        <h4 class="text-lg font-semibold text-gray-800">Lost and Found Item System</h4>
-                        <p class="text-sm text-gray-500 mb-2">Technologies: PHP, MySQL, JavaScript, Bootstrap, HTML, CSS</p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <h4 class="item-title">Lost and Found Item System</h4>
+                        <p class="item-date">Technologies: PHP, MySQL, JavaScript, Bootstrap, HTML, CSS</p>
+                        <ul class="item-description">
                             <li>Designed and developed a web-based platform to help users report and find lost or found items.</li>
                             <li>Implemented the back-end using PHP and MySQL to manage item postings, user details, and database interactions.</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="text-lg font-semibold text-gray-800">Student and Fees Management System</h4>
-                        <p class="text-sm text-gray-500 mb-2">Technologies: Python, MySQL</p>
-                         <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <h4 class="item-title">Student and Fees Management System</h4>
+                        <p class="item-date">Technologies: Python, MySQL</p>
+                         <ul class="item-description">
                             <li>Designed and built a desktop application to streamline student record-keeping and fee payment tracking.</li>
                         </ul>
                     </div>
                 </div>
             </section>
             
-            <!-- Certifications -->
-            <section>
-                <h3 class="text-2xl font-bold text-gray-700 border-b-2 border-sky-500 pb-2 mb-4">Certifications (Coursera)</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 grid grid-cols-1 md:grid-cols-2 gap-x-8">
+            <section class="section">
+                <h3 class="section-title">Certifications (Coursera)</h3>
+                <ul class="certs-grid">
                     <li>Data Analysis and Visualization with Python</li>
                     <li>Automation and Scripting with Python</li>
                     <li>Web Development with Python</li>
